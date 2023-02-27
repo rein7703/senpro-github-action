@@ -41,9 +41,9 @@ jobs:
           script: 
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/senpro-ssh
-            cd ~/senpro/456377/modul101/senpro-github-action/
+            cd ~/senpro/456377/modul101/senpro-github-action
             git restore .
-            git pul origin main
+            git pull origin main
             npm install
             npm run build
       
