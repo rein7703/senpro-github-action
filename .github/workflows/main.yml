@@ -39,9 +39,9 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: 
-            eval "${ssh-agent -s}"
+            eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/senpro-ssh
-            cd ~/senpro/456377/modul101/senpro-github-action
+            cd ~/senpro/456377/modul101/senpro-github-action/
             git restore .
             git pul origin main
             npm install
